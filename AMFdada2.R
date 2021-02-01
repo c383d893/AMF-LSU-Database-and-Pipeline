@@ -50,7 +50,7 @@ R1trunclen <- R1trunclen.value
 R2trunclen <- R2trunclen.value
 
 filterOutput <- filterAndTrim(fwd=fastqFs.trimmed, filt=fastqFs.filtered,
-              rev=fastqRs.trimmed, filt.rev=fastqRs.filtered,trimRight=c(R1trunclen,R2trunclen),
+              rev=fastqRs.trimmed, filt.rev=fastqRs.filtered,truncLen=c(R1trunclen,R2trunclen),
               compress=TRUE, verbose=TRUE, multithread=TRUE) 
 saveRDS(filterOutput,file=paste0(wdPath,'/dada2output/filterOutput.RDS'))
 
